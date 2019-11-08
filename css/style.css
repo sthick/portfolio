@@ -1,0 +1,460 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#35204d;
+    display: inline-block;
+    font-family: "Minion Variable Concept";
+}
+nav ul{
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+}
+.indexnav li{
+    display: inline-block;
+    padding-right: 10px;
+    margin: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-size: 25px;
+}
+.indexnav li:first-child{
+    margin-left: 0px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+nav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13(200px);
+    justify-content: center;
+}
+.indhead h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Segoe Script";
+    text-decoration: underline;
+    margin: 25px;
+    margin-top: 5px;
+    padding: 30px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.about img{
+    background-image: url("/images/cavspic1.jpg");
+    /* justify-content: center;
+    align-content: center; */
+    transform: rotate(90deg);
+    /* max-width: 80%;*/
+    max-height: 250px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin: 50px;
+    margin-left: 80px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.atext{
+    text-align: center;
+    margin: 25px;
+    margin-top: 70px;
+    font-size: 15px;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    padding: 25px;
+    line-height: 20px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.atext a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.cavs img{
+    background-image: url("images/cavaliers-cavs-cleveland-1081256.jpg");
+    /* max-width: 100%; */
+    max-height: 250px;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    margin: 25px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.ctext{
+    text-align: center;
+    margin: 25px;
+    font-size: 15px;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    padding: 25px;
+    line-height: 20px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.ctext a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.softball img{
+    background-image: url("images/msoftball.jpg");
+    /* max-width: 100%; */
+    max-height: 400px;
+    grid-column: 1/-1;
+    grid-row: 6/7;
+    margin: 50px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.stext{
+    text-align: center;
+    margin: 25px;
+    font-size: 15px;
+    grid-column: 1/-1;
+    grid-row: 7/8;
+    padding: 25px;
+    line-height: 20px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.stext a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.personal img{
+    background-image: url("images/bbb program 2.jpg");
+    /* max-width: 100%; */
+    max-height: 300px;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin: 50px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.ptext{
+    text-align: center;
+    margin: 25px;
+    font-size: 15px;
+    grid-column: 1/-1;
+    grid-row: 9/10;
+    padding: 25px;
+    line-height: 20px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.ptext a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.resume img{
+    background-image: url("images/michigan.jpg");
+    /* max-width: 100%; */
+    max-height: 300px;
+    grid-column: 1/-1;
+    grid-row: 10/11;
+    margin: 50px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+} 
+.rtext{
+    text-align: center;
+    margin: 25px;
+    font-size: 15px;
+    grid-column: 1/-1;
+    grid-row: 11/12;
+    padding: 25px;
+    line-height: 20px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.rtext a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+.aboutnav li{
+    display : inline-block;
+    padding-right: 15px;
+    margin: 5px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.aboutnav li:nth-child(2){
+    text-decoration-line: underline; 
+    text-decoration-style: solid;
+}
+.abouthead h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: left;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 30px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.headshot img{
+    background-image: url("/images/HeadShot.JPG");
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    max-height: 300px;
+    margin: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.intro p{
+    text-align: center;
+    margin: 25px;
+    margin-top: 0px;
+    font-size: 10px;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    padding: 25px;
+    line-height: 15px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.contact p{
+    text-align: left;
+    margin: 25px;
+    margin-top: 0px;
+    font-size: 10px;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    padding: 25px;
+    line-height: 15px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+
+
+
+
+
+
+
+.projnav li{
+    display : inline-block;
+    font-size: 25px;
+    padding-right: 15px;
+    margin: 10px;
+}
+.projnav li:last-child{
+    text-decoration-line: underline; 
+    text-decoration-style: solid;
+}
+.collapsible{
+    background-color: #7E62A2;
+    display: block;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    width: 400px; 
+    margin-left: 10px;
+    border: 1px double black;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+    text-align: center;
+}
+.cavsproj li{
+    padding: 15px;
+    display: none;
+    margin: 50px;
+    width: 300px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.cavsproj h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 30px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.cavsproj img{
+    background-image: url("images/cavaliers-cavs-cleveland-1081256.jpg");
+    /* max-width: 100%; */
+    max-height: 250px;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    margin: 25px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.softballproj li{
+    padding: 15px;
+    display: none;
+    margin: 50px;
+    width: 300px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.softballproj h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 30px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.softballproj img{
+    background-image: url("images/msoftball.jpg");
+    /* max-width: 100%; */
+    max-height: 400px;
+    grid-column: 1/-1;
+    grid-row: 6/7;
+    margin: 50px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.graphicproj a{
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 100px;
+    margin-top: 50px;
+    margin-bottom: 500px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.graphicproj h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 30px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.graphicproj img{
+    background-image: url("images/bbb program 2.jpg");
+    /* max-width: 100%; */
+    max-height: 300px;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+
+
+
+
+
+
+.gallerynav li{
+    display : inline-block;
+    font-size: 20px;
+    padding-right: 15px;
+}
+.gallerynav li:last-child{
+    text-decoration-line: underline; 
+    text-decoration-style: solid;
+}
+.play h1{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: left;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 30px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.play img{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+.more img{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+footer{
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
