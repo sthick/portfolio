@@ -274,7 +274,7 @@ nav a:hover{
     box-shadow: 10px 10px #CF387F;
 }
 input[type=text], select, textarea{
-    width: 75%;
+    width: 90%;
     padding: 10px;
     border: 1px double black;
     border-radius: 4px;
