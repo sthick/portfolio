@@ -44,6 +44,12 @@ nav a:hover{
     grid-template-rows: 13(200px);
     justify-content: center;
 }
+.gallerycontainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13(200px);
+    justify-content: center;
+}
 .indhead h1{
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -492,6 +498,9 @@ footer{
     .cavscontainer{
         grid-template-columns: 1fr 1fr;
     }
+    .gallerycontainer{
+        grid-template-columns: 1fr 1fr;
+    }
     .indhead h1{
         margin-top: 50px;
         margin-right: 0px;
@@ -762,7 +771,7 @@ footer{
 
 
 
-    .container{
+    .gallerycontainer{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
