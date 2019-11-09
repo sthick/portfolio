@@ -9,7 +9,7 @@ body{
 nav ul{
     list-style-type: none;
     text-align: center;
-    position: fixed;
+    position: relative;
 }
 .indexnav li{
     display: inline-block;
@@ -477,7 +477,6 @@ footer{
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
-    position: fixed;
 }
 
 
