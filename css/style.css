@@ -275,13 +275,14 @@ nav a:hover{
 }
 input[type=text], select, textarea{
     width: 90%;
+    padding: 10px;
     border: 1px double black;
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
 }
 input[type=submit]{
-    padding: 50px;
+    padding: 10px;
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -292,7 +293,6 @@ input[type=submit]:hover{
 }
 .formcontainer{
     margin: 50px;
-    padding: 50px;
     background-color:#7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
