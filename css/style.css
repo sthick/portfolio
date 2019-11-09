@@ -282,8 +282,10 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     resize: vertical;
 }
+
 input[type=submit]{
     padding: 10px;
+    margin: 10px;
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -297,6 +299,10 @@ input[type=submit]:hover{
     background-color:#7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
+}
+.formcontainer label{
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 
