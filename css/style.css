@@ -38,6 +38,12 @@ nav a:hover{
     grid-template-rows: 13(200px);
     justify-content: center;
 }
+.cavscontainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13(200px);
+    justify-content: center;
+}
 .indhead h1{
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -58,7 +64,7 @@ nav a:hover{
     align-content: center; */
     transform: rotate(90deg);
     /* max-width: 80%;*/
-    max-height: 250px;
+    height: 250px;
     grid-column: 1/-1;
     grid-row: 2/3;
     margin: 50px;
@@ -289,7 +295,7 @@ nav a:hover{
     cursor: pointer;
     padding: 10px;
     width: 400px; 
-    margin-left: 10px;
+    margin-left: 50px;
     border: 1px double black;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -324,7 +330,7 @@ nav a:hover{
     grid-column: 1/-1;
     grid-row: 4/5;
     margin: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -359,7 +365,7 @@ nav a:hover{
     grid-row: 6/7;
     margin: 50px;
     margin-top: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -394,7 +400,7 @@ nav a:hover{
     grid-column: 1/-1;
     grid-row: 8/9;
     margin: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     margin-top: 25px;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -406,6 +412,7 @@ nav a:hover{
 
 
 .gallerynav li{
+    margin-top: 20px;
     display : inline-block;
     font-size: 20px;
     padding-right: 15px;
@@ -449,6 +456,17 @@ nav a:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+.add img{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F; 
+}
 footer{
     font-size: 15px;
     color: white;
@@ -457,4 +475,296 @@ footer{
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 800px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cavscontainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .indhead h1{
+        margin-top: 50px;
+        margin-right: 0px;
+        font-size: 50px;
+        padding: 100px;
+    }
+    .about{
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .atext{
+        padding: 20px;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .ctext{
+        padding-top: 125px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-bottom: 0px;
+    }
+    .stext{
+        padding-top: 60px;
+        padding-left: 15px;
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .ptext{
+        padding-top: 60px;
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .rtext{
+        grid-column: 2/3;
+    }
+
+
+
+
+
+    .aboutnav li{
+        font-size: 20px;
+    }
+    .abouthead h1{
+        padding: 110px;
+        text-align: center;
+        font-size: 50px;
+    }    
+    .headshot img{
+        max-height: 800px;
+    }
+    .intro p{
+       font-size: 20px;
+       line-height: 25px;
+    }
+    .contact p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+
+
+
+
+
+    .cavsproj h1{
+        margin-top: 55px;
+    }
+    .cavsproj img{
+        margin: 50px;
+        margin-top: 100px;
+    }
+    .cavsproj ul{
+        margin-top: 0px;
+    }
+    .collapsible:first-child{
+        margin-top: 50px;
+    }
+    .softballproj h1{
+        margin-top: 55px;
+    }
+    .graphicproj h1{
+        margin-top:50px;
+    }
+    .graphicproj img{
+        margin-top: 50px;
+    }
+
+
+
+
+    .play{
+        margin-bottom: 0px;
+    }
+    .more img{
+        margin-top: 50px;
+    }
+    .top img{
+        margin-top: 100px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .indhead{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 10px;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+    .about{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin: 30px;
+        margin-left: 0px;
+    }
+    .about img{
+        height: 400px;
+    }
+    .atext{
+        padding-top: 115px;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-right: 50px;
+        font-size: 20px;
+        line-height: 25px;
+        align-content: center;
+    }
+    .cavs{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin: 50px;
+        margin-left: 115px;
+    }
+    .ctext{
+        padding: 50px;
+        padding-left: 25px;
+        font-size: 20px;
+        line-height: 25px;
+        grid-column: 1/2;
+        grid-row:3/4;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-right: 0px;
+    }
+    .softball{
+        margin-left: 200px;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        margin: 50px;
+    }
+    .stext{
+        padding-top: 90px;
+        padding-bottom: 50px;
+        font-size: 20px;
+        line-height: 25px;
+        grid-column: 2/3;
+        grid-row: 4/5;
+        margin-top: 110px;
+        margin-bottom: 80px;
+        margin-right: 100px;
+        margin-left: 0px;
+    }
+    .personal{
+        margin: 50px;
+        margin-left: 150px;
+        grid-column: 2/3;
+        grid-row: 5/6px;
+    }
+    .ptext{
+        padding-top: 60px;
+        font-size: 20px;
+        line-height: 25px;
+        grid-column: 1/2;
+        grid-row: 5/6;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-right: 0px;
+    }
+    .resume{
+        grid-column: 1/2;
+        grid-row: 6/7;
+        margin: 50px;
+    }
+    .rtext{
+        padding-top: 60px;
+        font-size: 20px;
+        line-height: 25px;
+        grid-column: 2/3;
+        grid-row: 6/7;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 0px;
+    }
+
+
+
+    .abouthead{
+        grid-column: 1/-1;
+    }   
+    .abouthead h1{
+        padding: 15px;
+    } 
+    .headshot{
+        grid-row: 2/4;
+    }
+    .headshot img{
+        margin-left: 200px;
+        margin-top: 100px;
+    }
+    .intro p{
+        margin-top: 50px;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .contact p{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+
+
+
+    .cavscontainer{
+        grid-template-columns: 20px 1500px 20px;
+    }
+    .cavsproj{
+        grid-column: 2/3;
+    }
+    .cavsproj img{
+        margin-left: 500px;
+    }
+    .cavsproj ul{
+        margin-left: 280px;
+    }
+    .collapsible{
+        width: 800px;
+    }
+    .softballproj{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .softballproj img{
+        margin-left: 550px;
+    }
+    .softballproj ul{
+        margin-left: 280px;
+    }
+    .graphicproj{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin: 0px;
+    }
+    .graphicproj img{
+        margin-left: 550px;
+    }
+
+
+
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
 }
