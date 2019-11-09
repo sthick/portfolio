@@ -6,6 +6,28 @@ body{
     display: inline-block;
     font-family: "Minion Variable Concept";
 }
+
+
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+.skip a:focus{  
+    top:0px;
+}
+  
+:focus{
+    border: 2px solid black;
+}
+
+
 nav ul{
     list-style-type: none;
     text-align: center;
@@ -403,19 +425,10 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
-
-.graphicproj{
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
 .graphicproj img:hover{
     transform: rotateY(180deg);
 }
-.front, .back{
-    backface-visibility: hidden;
-}
-.back a{
+.graphicproj a{
     padding: 10px;
     padding-left: 100px;
     padding-right: 100px;
@@ -438,20 +451,6 @@ input[type=submit]:hover{
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
-}
-
-.graphicproj .front{
-    background-image: url("images/bbb program 2.jpg");
-    perspective: 1000px;
-    max-height: 300px;
-    grid-column: 1/-1;
-    grid-row: 8/9;
-    margin: 50px;
-    margin-bottom: 50px;
-    margin-top: 25px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-    transform: rotateY(180deg);
 }
 
 
