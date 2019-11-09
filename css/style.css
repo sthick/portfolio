@@ -463,7 +463,10 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
 }
 
+
 .flip-card{
+    grid-column: 1/-1;
+    grid-row: 9/10;
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -483,6 +486,10 @@ input[type=submit]:hover{
     backface-visibility: hidden;
 }
 .flip-card-front{
+    background-color: #7E62A2;
+    transform: rotateY(180deg);
+}
+.flip-card-back{
     background-color: #7E62A2;
     transform: rotateY(180deg);
 }
