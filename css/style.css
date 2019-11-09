@@ -426,9 +426,10 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+
 .graphicproj img{
     background-image: url("images/bbb program 2.jpg");
-    /* max-width: 100%; */
+    perspective: 1000px;
     max-height: 300px;
     grid-column: 1/-1;
     grid-row: 8/9;
@@ -438,6 +439,10 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+.graphicproj:hover{
+    transform: rotateY(180deg);
+}
+
 
 
 
