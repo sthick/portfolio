@@ -426,9 +426,6 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
 }
 
-.graphicproj img:hover{
-    transform: rotateY(180deg);
-}
 .graphicproj a{
     padding: 10px;
     padding-left: 100px;
@@ -453,7 +450,18 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
-
+.graphicproj img{
+    background-image: url("images/bbb program 2.jpg");
+    perspective: 1000px;
+    max-height: 300px;
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    margin: 50px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
 
 .flip-card{
     background-color: #7E62A2;
