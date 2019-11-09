@@ -367,7 +367,7 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
 }
 .cavsproj h1{
-    grid-column: 1/-1;
+    /* grid-column: 1/-1; */
     grid-row: 1/2;
     text-align: center;
     font-size: 25px;
