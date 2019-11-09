@@ -455,6 +455,29 @@ input[type=submit]:hover{
 }
 
 
+.flip-card{
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+    perspective: 1000px;
+}
+.flip-card-inner{
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-front{
+    background-color: #7E62A2;
+    transform: rotateY(180deg);
+}
 
 
 
