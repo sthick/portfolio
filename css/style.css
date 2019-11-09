@@ -425,6 +425,7 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+
 .graphicproj img:hover{
     transform: rotateY(180deg);
 }
