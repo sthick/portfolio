@@ -403,7 +403,19 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
-.graphicproj a{
+
+.graphicproj{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.graphicproj img:hover{
+    transform: rotateY(180deg);
+}
+.front, .back{
+    backface-visibility: hidden;
+}
+.back a{
     padding: 10px;
     padding-left: 100px;
     padding-right: 100px;
@@ -428,7 +440,7 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
 }
 
-.graphicproj img{
+.graphicproj .front{
     background-image: url("images/bbb program 2.jpg");
     perspective: 1000px;
     max-height: 300px;
@@ -441,9 +453,6 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
     transform: rotateY(180deg);
 }
-/* .graphicproj img:hover{
-    transform: rotateY(180deg);
-} */
 
 
 
