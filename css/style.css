@@ -273,6 +273,28 @@ nav a:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px double black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=submit]{
+    background-color: #7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
+input[type=submit]:hover{
+    background-color: #CF387F;
+    box-shadow: 10px 10px #7E62A2;
+}
+.formcontainer{
+    background-color:#7E62A2;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F;
+}
 
 
 
