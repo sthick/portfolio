@@ -467,6 +467,7 @@ input[type=submit]:hover{
 .flip-card{
     grid-column: 1/-1;
     grid-row: 9/10;
+    width: 800px;
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
