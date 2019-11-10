@@ -348,7 +348,26 @@ input[type=submit]:hover{
     margin-left: 10px;
     font-size: 20px;
 }
-.flip-card {
+/* .flip-card {
+    margin: 25px;
+    margin-left: 75px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border: 1px double black;
+    box-shadow: 10px 10px #CF387F
+} */
+.flip-card{
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("images/cliffs.jpg");      /* Your code here - Link to header.jpg in the images folder */
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;                /* Parallax effect */
+    grid-column: 1/-1;
+    
     margin: 25px;
     margin-left: 75px;
     background-color: transparent;
