@@ -346,6 +346,11 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+.formcontainer legend{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 25px;
+}
 .formcontainer label{
     margin-top: 30px;
     margin-left: 10px;
