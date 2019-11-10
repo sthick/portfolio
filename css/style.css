@@ -355,7 +355,6 @@ input[type=submit]:hover{
     background-color: transparent;
     width: 300px;
     height: 300px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F
@@ -386,7 +385,8 @@ input[type=submit]:hover{
 }
 .flip-card-back {
     padding: 10px;
-    background-color: #7E62A2;
+    color: white;
+    background-color: black;
     transform: rotateY(180deg);
 }
 .parallax{
