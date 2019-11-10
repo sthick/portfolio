@@ -428,7 +428,7 @@ input[type=submit]:hover{
     margin: 50px;
     margin-left: 550px;
     width: 300px;
-    disply: none;
+    display: none;
     background-color: #3F2F56;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
@@ -843,7 +843,7 @@ footer{
 
 
     .aboutnav{
-        margin-left: -700px;
+        margin-left: -780px;
     }
     .abouthead{
         grid-column: 1/-1;
