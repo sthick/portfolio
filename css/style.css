@@ -31,6 +31,12 @@ nav ul{
     position: relative;
 }
 .indexnav li{
+    color: #202020;
+    background-color: #2d2d2d;
+    letter-spacing: .1em;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
     display: inline-block;
     padding-right: 10px;
     margin: 10px;
@@ -875,7 +881,7 @@ footer{
 
 @media screen and (prefers-reduced-motion: reduce){
     html{
-        scroll-behavior: auto; /* Removes scroll animation */
+        scroll-behavior: auto; 
     }
   
     .skip a{
@@ -884,8 +890,8 @@ footer{
       padding: 6px;
       position: absolute;
       top: -40px;
-      -webkit-transition: none !important; /* Your code here - set to default setting */
-      transition: none !important;/* Your code here - set to default setting */
+      -webkit-transition: none !important; 
+      transition: none !important;
       z-index: 1;
     }
   
