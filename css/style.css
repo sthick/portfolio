@@ -864,6 +864,8 @@ footer{
         background-image: url("images/cliffs.jpg");
         grid-column: 1/-1;
         grid-row: 4/5;
+        height: 400px;
+        width: 800px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
