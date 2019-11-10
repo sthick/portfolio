@@ -5,7 +5,7 @@ body{
     background-color:#3F2F56;
     display: inline-block;
     color: black;
-    font-family: "Minion Variable Concept";
+    font-family: "Verdana";
 }
 .skip a{
     background: white;
@@ -80,7 +80,7 @@ nav a:hover{
     margin: 25px;
     margin-top: 5px;
     padding: 30px;
-    background-color: #644D84;
+    background-color: white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -104,7 +104,7 @@ nav a:hover{
     grid-row: 3/4;
     padding: 25px;
     line-height: 20px;
-    background-color: #644D84;
+    background-color: white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -132,7 +132,7 @@ nav a:hover{
     grid-row: 5/6;
     padding: 25px;
     line-height: 20px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -161,7 +161,7 @@ nav a:hover{
     grid-row: 7/8;
     padding: 25px;
     line-height: 20px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -190,7 +190,7 @@ nav a:hover{
     grid-row: 9/10;
     padding: 25px;
     line-height: 20px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -218,7 +218,7 @@ nav a:hover{
     grid-row: 11/12;
     padding: 25px;
     line-height: 20px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -277,7 +277,7 @@ nav a:hover{
     margin-bottom: 0px;
     padding: 10px;
     padding-bottom: 30px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -313,7 +313,7 @@ nav a:hover{
     grid-row: 3/4;
     padding: 25px;
     line-height: 15px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -330,7 +330,7 @@ input[type=text], select, textarea{
 input[type=submit]{
     padding: 10px;
     margin: 30px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -340,7 +340,7 @@ input[type=submit]:hover{
 }
 .formcontainer{
     margin: 50px;
-    background-color:#644D84;
+    background-color: white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -385,8 +385,7 @@ input[type=submit]:hover{
 }
 .flip-card-back {
     padding: 10px;
-    color: white;
-    background-color: black;
+    background-color:  white;
     transform: rotateY(180deg);
 }
 .parallax{
@@ -410,14 +409,12 @@ input[type=submit]:hover{
     text-decoration-style: solid;
 }
 .collapsible{
-    background-color: #644D84;
+    background-color:  white;
     display: block;
-    color: black;
     cursor: pointer;
     padding: 10px;
     width: 400px; 
     margin-left: 50px;
-    border: 1px double black;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
     text-align: center;
@@ -427,7 +424,7 @@ input[type=submit]:hover{
     display: none;
     margin: 50px;
     width: 300px;
-    background-color: #644D84;
+    background-color: white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -440,7 +437,7 @@ input[type=submit]:hover{
     margin: 30px;
     margin-bottom: 0px;
     padding: 10px;
-    background-color: #644D84;
+    background-color: white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -460,7 +457,7 @@ input[type=submit]:hover{
     display: none;
     margin: 50px;
     width: 300px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -474,7 +471,7 @@ input[type=submit]:hover{
     margin-top: 50px;
     margin-bottom: 0px;
     padding: 10px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -498,7 +495,7 @@ input[type=submit]:hover{
     margin: 100px;
     margin-top: 50px;
     margin-bottom: 500px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -511,7 +508,7 @@ input[type=submit]:hover{
     margin: 30px;
     margin-bottom: 0px;
     padding: 10px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
@@ -551,7 +548,7 @@ input[type=submit]:hover{
     margin: 30px;
     margin-bottom: 0px;
     padding: 10px;
-    background-color: #644D84;
+    background-color:  white;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
