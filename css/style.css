@@ -832,6 +832,7 @@ footer{
     }   
     .abouthead h1{
         padding: 15px;
+        padding-bottom: 30px;
     } 
     .headshot{
         grid-row: 2/4;
