@@ -343,9 +343,9 @@ input[type=submit]:hover{
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-/* .flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-} */
+}
 .flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
