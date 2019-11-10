@@ -236,6 +236,7 @@ nav a:hover{
 .aboutnav li{
     display : inline-block;
     padding-right: 15px;
+    text-align: left;
     margin: 5px;
     margin-top: 15px;
     font-size: 15px;
@@ -274,6 +275,7 @@ nav a:hover{
     margin: 30px;
     margin-bottom: 0px;
     padding: 10px;
+    padding-bottom: 30px;
     background-color: #7E62A2;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
