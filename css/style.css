@@ -431,7 +431,6 @@ input[type=submit]:hover{
 .cavscontainer p{
     padding: 15px;
     margin: 50px;
-    margin-left: 550px;
     width: 300px;
     display: none;
     background-color: #3F2F56;
@@ -893,6 +892,9 @@ footer{
 
     .cavscontainer{
         grid-template-columns: 20px 1500px 20px;
+    }
+    .cavscontainer p{
+        margin-left: 550px;
     }
     .cavsproj{
         grid-column: 2/3;
