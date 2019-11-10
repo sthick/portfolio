@@ -424,7 +424,7 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
     text-align: center;
 }
-.cavsproj li{
+.cavsproj p{
     padding: 15px;
     display: none;
     margin: 50px;
