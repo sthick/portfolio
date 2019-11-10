@@ -432,6 +432,9 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+.cavscontainer{
+    border: none;
+}
 .cavsproj h1{
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -910,6 +913,7 @@ footer{
     }
     .graphicproj a{
         width: 800px;
+        margin-left: 0px;
     }
 
 
