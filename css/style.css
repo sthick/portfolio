@@ -566,6 +566,10 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F; 
 }
+img:hover{   
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+}
 footer{
     font-size: 15px;
     color: white;
