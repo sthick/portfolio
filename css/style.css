@@ -849,6 +849,9 @@ footer{
         grid-column: 2/3;
         grid-row: 4/5;
     }
+    .flip-card{
+        margin-left:210px;
+    }
 
 
 
