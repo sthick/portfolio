@@ -842,7 +842,9 @@ footer{
     }
 
 
-
+    .aboutnav{
+        margin-left: -700px;
+    }
     .abouthead{
         grid-column: 1/-1;
     }   
