@@ -391,9 +391,9 @@ input[type=submit]:hover{
     background-color: #3F2F56;
     transform: rotateY(180deg);
 }
-.parallax{
-    /* background-attachment: scroll;
-} */
+/* .parallax{
+     background-attachment: scroll;
+}  */
 
 
 
