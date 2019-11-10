@@ -870,3 +870,26 @@ footer{
     }
 }
 
+
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      background: white;
+      left: 0;
+      padding: 6px;
+      position: absolute;
+      top: -40px;
+      -webkit-transition: none !important; /* Your code here - set to default setting */
+      transition: none !important;/* Your code here - set to default setting */
+      z-index: 1;
+    }
+  
+    .skip a:focus{
+      top:0;
+    }
+}
