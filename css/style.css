@@ -4,6 +4,7 @@ html{
 body{
     background-color:#35204d;
     display: inline-block;
+    color: white;
     font-family: "Minion Variable Concept";
 }
 .skip a{
