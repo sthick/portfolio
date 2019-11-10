@@ -420,7 +420,6 @@ input[type=submit]:hover{
     width: 400px; 
     margin-left: 50px;
     border: 1px double black;
-    border: 1px double black;
     box-shadow: 10px 10px #CF387F;
     text-align: center;
 }
@@ -429,6 +428,7 @@ input[type=submit]:hover{
     margin: 50px;
     margin-left: 550px;
     width: 300px;
+    disply: none;
     background-color: #3F2F56;
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
