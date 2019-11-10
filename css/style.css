@@ -392,8 +392,8 @@ input[type=submit]:hover{
     transform: rotateY(180deg);
 }
 .parallax{
-    background-attachment: scroll;
-}
+    /* background-attachment: scroll;
+} */
 
 
 
@@ -866,7 +866,7 @@ footer{
     .flip-card{
         margin-left:210px;
     }
-    .parallax{
+    /* .parallax{
         background-image: url("images/cliffs.jpg");
         grid-column: 1/-1;
         grid-row: 4/5;
@@ -876,7 +876,7 @@ footer{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
+    } */
 
 
 
