@@ -424,9 +424,8 @@ input[type=submit]:hover{
     box-shadow: 10px 10px #CF387F;
     text-align: center;
 }
-.cavsproj p{
+.cavscontainer p{
     padding: 15px;
-    display: none;
     margin: 50px;
     width: 300px;
     background-color: #3F2F56;
