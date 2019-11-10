@@ -6,9 +6,6 @@ body{
     display: inline-block;
     font-family: "Minion Variable Concept";
 }
-
-
-
 .skip a{
     background: white;
     left: 0;
@@ -346,9 +343,9 @@ input[type=submit]:hover{
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner {
+/* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-}
+} */
 .flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
@@ -364,7 +361,6 @@ input[type=submit]:hover{
 }
 .flip-card-back {
     padding: 10px;
-    padding-top: 100px;
     background-color: #7E62A2;
     transform: rotateY(180deg);
 }
