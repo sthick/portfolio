@@ -858,6 +858,9 @@ footer{
     .graphicproj img{
         margin-left: 550px;
     }
+    .graphicproj a{
+        width: 800px;
+    }
 
 
 
