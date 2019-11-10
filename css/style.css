@@ -862,6 +862,7 @@ footer{
     .parallax{
         background-image: url("images/cliffs.jpg");
         width: 800px;
+        height: 500px;
         grid-column: 1/-1;
         grid-row: 4/5;
         background-attachment: fixed;
