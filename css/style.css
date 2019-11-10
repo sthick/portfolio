@@ -529,6 +529,9 @@ input[type=submit]:hover{
     border: 1px double black;
     box-shadow: 10px 10px #CF387F;
 }
+.graphicproj a{
+    color: white;
+}
 
 
 
