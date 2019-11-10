@@ -743,6 +743,9 @@ footer{
         margin-left: 5px;
         margin-right: 20px;
     }
+    .aboutnav{
+        text-align: left;
+    }
     .about{
         grid-column: 1/2;
         grid-row: 2/3;
