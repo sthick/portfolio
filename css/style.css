@@ -889,11 +889,9 @@ footer{
     .cavsproj img{
         margin-left: 500px;
     }
-    .cavsproj ul{
-        margin-left: 280px;
-    }
     .collapsible{
         width: 800px;
+        margin-left:325px;
     }
     .softballproj{
         grid-column: 2/3;
@@ -901,9 +899,6 @@ footer{
     }
     .softballproj img{
         margin-left: 550px;
-    }
-    .softballproj ul{
-        margin-left: 280px;
     }
     .graphicproj{
         grid-column: 2/3;
