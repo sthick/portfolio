@@ -1,13 +1,269 @@
-html{
-    scroll-behavior: smooth;
+/* ===============================
+   ===============================
+   BEGIN NAVIGATION CSS SECTION
+   ===============================
+   ===============================
+*/
+#navigations {
+    height: 16vh;
+    max-height: 85px;
+    min-height: 70px;
+    width: 100%;
 }
-body{
-    background-color:#644D84;
+
+header {
+    padding-bottom: 35px;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Button styling */
+.menu-toggle {
     display: inline-block;
-    color:white;
-    font-family: "Minion Variable Concept";
+    float: right;
+    margin-top: 25px;
+    padding: 25px 50px;
+    line-height: 1em;
+    font-size: 1.2em;
+    color: #333;
 }
-.skip a{
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: #3c78d8;
+}
+
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+.main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: none;
+    background-color: #fff;
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+    z-index: 999;
+
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 1em 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+
+    min-height: 100%;
+    width: 200px;
+
+}
+
+.main-menu a {
+    display: block;
+    padding: .1em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    color: #3c78d8;
+}
+
+.main-menu .menu-close {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+/*
+ On small devices, allow it to toggle...
+*/
+/*
+ :target for non-JavaScript
+ [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+    box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+}
+
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000;
+}
+
+
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0, 0, 0, .85);
+    cursor: default;
+}
+
+@supports (position: fixed) {
+
+    .main-menu,
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop {
+        position: fixed;
+    }
+}
+
+/*
+ Larger screen styling
+ Horizontal menu
+*/
+@media (min-width: 985px) {
+
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    /* Undo positioning of off-canvas menu */
+    .main-menu {
+        position: relative;
+        float: right;
+        top: 54px;
+        height: auto;
+        display: block;
+        overflow: hidden;
+        left: -75px;
+    }
+
+    .main-menu ul {
+        display: flex;
+
+        /* Undo off-canvas styling */
+        padding: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+
+    .main-menu a {
+        color: #000;
+        border: 0 !important;
+        /* Remove borders from off-canvas styling */
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: none;
+        /* Remove background from off-canvas styling */
+        color: #3c78d8;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 90px;
+    margin-top: 15px;
+}
+
+nav li {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0.05vw;
+    letter-spacing: .1rem;
+    display: inline;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    text-decoration: none;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    opacity: 0.6;
+    /*box-shadow: 2px 3px 10px #000000;
+  margin-top:20px;
+  margin-left:5.3%; */
+    animation-duration: 1s;
+}
+
+/*This h1 should be used for nav exclusively. */
+h1 {
+    font-size: 2.5rem;
+    margin: .67rem 0;
+}
+
+#logo {
+    float: left;
+    margin-left: 5%;
+    margin-top: 40px;
+    color: black;
+    min-width: 100px;
+    max-width: 400px;
+    position: absolute;
+    transition: all .3s;
+
+}
+
+#logo:hover {
+    animation-name: logo;
+    animation-duration: .3s;
+    animation-fill-mode:forwards;
+    opacity: 0.6;
+    /*box-shadow: 2px 3px 10px #000000;
+  margin-top:20px;
+  margin-left:5.3%; */
+    animation-duration: 1s;
+}
+/*
+#logo {
+    background-color: #B5985A;
+    background-color: #3c78d8;
+   opacity: .8;
+   padding: 20px;
+   margin-top: 0px;
+   box-shadow: 0px 10px 10px grey;
+} */
+
+
+.skip a {
     background: white;
     left: 0;
     padding: 6px;
@@ -17,946 +273,573 @@ body{
     transition: top 1s ease-out;
     z-index: 1;
 }
-.skip a:focus{  
-    top:0px;
+
+.skip a:focus {
+    top: 0;
 }
-  
-:focus{
+
+*:focus {
     border: 2px solid black;
 }
 
+.media_title {
+  font-style: italic;
+}
 
-nav ul{
-    list-style-type: none;
+footer {
+  grid-column: 1 / -1;
+  padding-top: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #43529F;
+}
+
+
+/*tablet*/
+@media screen and (max-width: 900px) {
+    .nav {
+        text-align: center;
+        padding: 0px;
+        min-height: none;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin-right: 0px;
+        background-color: #fff;
+        height: 100vh;
+    }
+
+    nav li {
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        padding-top: 50px;
+        letter-spacing: .1rem;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+/*End the media query*/
+
+#currentpage {
+    color: #060829!important;
+    text-decoration-line:underline;
+    background-color: rgb(108, 108, 223);
+}
+
+/* ===============================
+   ===============================
+   END OF NAV CSS
+   ===============================
+   ===============================
+*/
+
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background: rgb(239,239,240);
+   background: -moz-linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+   background: -webkit-linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+   background: linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff0",endColorstr="#ffffff",GradientType=1);
+}
+
+#navigations {
+  background-color:white;
+  padding-bottom:40px;
+}
+
+#indexfoot {
+  grid-column: 1 / -1;
+  grid-row: 6/7;
+  padding-top: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #43529F;
+}
+@media screen and (max-width: 1074px) {
+    #indexfoot {
+        grid-column: 1 / -1;
+        grid-row: 7 / -1;
+    }
+}
+  
+@media screen and (max-width: 800px) {
+    #indexfoot {
+        grid-column: 1 / -1;
+        grid-row: 7/-1;;
+    }
+}
+  
+.container {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto 500px 500px 500px 500px 50px 50px;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(239,239,240);
+    background: -moz-linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(237deg, rgba(239,239,240,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff0",endColorstr="#ffffff",GradientType=1);
+}
+
+
+header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: .75rem 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: .83rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+a {
+  color: #43529f!important;
+}
+
+a:hover {
+  opacity:0.6;
+}
+
+.nav {
+    grid-column: -1 / 1;
+    grid-row: 2 / 3;
+}
+
+.nav ul {
+    list-style: none;
     text-align: center;
-    position: relative;
+    padding: 0;
+    margin: 0;
 }
-.indexnav li{
-    display: inline-block;
-    padding-right: 10px;
-    margin: 10px;
-    margin-left: 5px;
-    margin-top: 15px;
-    font-size: 25px;
+
+.nav li {
+    display: inline;
 }
-.indexnav li:first-child{
-    margin-left: 0px;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-}
-nav a{
-    color: white;
-    font-weight: bold;
+
+.nav li a {
     text-decoration: none;
+    margin: .5rem;
+    color: black;
+    font-weight: 700;
 }
-nav a:hover{
-    text-decoration: underline;
+
+.profilepic {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 13(200px);
-    justify-content: center;
+
+.profilepic img {
+  width: 250px;
 }
-.cavscontainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 13(200px);
-    justify-content: center;
+.aboutme {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
 }
-.gallerycontainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 13(200px);
-    justify-content: center;
+
+.news {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
 }
-.indhead h1{
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    text-align: center;
-    font-size: 35px;
-    font-family: "Segoe Script";
-    text-decoration: underline;
-    margin: 25px;
-    margin-top: 5px;
-    padding: 30px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+
+.container li {
+  margin-bottom:10px;
 }
-.about img{
-    background-image: url("/images/cavspic1.jpg");
-    height: 250px;
+
+/*parallax image begin*/
+.parallax{
+    background-image: url("../images/585.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: 1/-1;
     grid-row: 2/3;
-    margin: 50px;
-    margin-left: 150px;
-    margin-bottom: 0px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
 }
-.atext{
-    text-align: center;
-    margin: 25px;
-    margin-top: 70px;
-    font-size: 15px;
-    grid-column: 1/-1;
-    grid-row: 3/4;
-    padding: 25px;
-    line-height: 20px;
-    background-color:#3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+/*parallax image end*/
+
+.parallax p{
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 1000px;
+    margin-top: 10px;
 }
-.atext a{
+.parallax h1{
     color: white;
-    font-weight: bold;
-    text-decoration: underline;
+    margin-top: 80px;
+    margin-left: 1050px;
+    margin-bottom:0px;
 }
-.cavs img{
-    background-image: url("images/cavaliers-cavs-cleveland-1081256.jpg");
-    /* max-width: 100%; */
-    max-height: 250px;
+
+
+.softball{
+    background-image: url("../images/msoftball.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/-1;
+    grid-row:3/4;
+}
+.softball p{
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 800px;
+    margin-top: 150px;
+}
+.softball h1{
+    color: #ffcb05;
+    margin-top: 50px;
+    margin-left: 1250px;
+    margin-bottom:0px;
+}
+
+.etas{
+    background-image: url("../images/etas.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: 1/-1;
     grid-row: 4/5;
-    margin: 25px;
-    margin-bottom: 0px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
 }
-.ctext{
-    text-align: center;
-    margin: 25px;
-    font-size: 15px;
+.etas p{
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 850px;
+    margin-top: 150px;
+}
+.etas h1{
+    color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom:0px;
+}
+
+
+.cavs{
+    background-image: url("../images/cavaliers-cavs-cleveland-1081256.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: 1/-1;
     grid-row: 5/6;
-    padding: 25px;
-    line-height: 20px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
 }
-.ctext a{
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.softball img{
-    background-image: url("images/msoftball.jpg");
-    /* max-width: 100%; */
-    max-height: 400px;
-    grid-column: 1/-1;
-    grid-row: 6/7;
-    margin: 50px;
-    margin-bottom: 0px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.stext{
-    text-align: center;
-    margin: 25px;
-    font-size: 15px;
-    grid-column: 1/-1;
-    grid-row: 7/8;
-    padding: 25px;
-    line-height: 20px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.stext a{
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.personal img{
-    background-image: url("images/bbb program 2.jpg");
-    /* max-width: 100%; */
-    max-height: 300px;
-    grid-column: 1/-1;
-    grid-row: 8/9;
-    margin: 50px;
-    margin-bottom: 0px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.ptext{
-    text-align: center;
-    margin: 25px;
-    font-size: 15px;
-    grid-column: 1/-1;
-    grid-row: 9/10;
-    padding: 25px;
-    line-height: 20px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.ptext a{
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-}
-.resume img{
-    background-image: url("images/michigan.jpg");
-    /* max-width: 100%; */
-    max-height: 300px;
-    grid-column: 1/-1;
-    grid-row: 10/11;
-    margin: 50px;
-    margin-bottom: 0px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-} 
-.rtext{
-    text-align: center;
-    margin: 25px;
-    font-size: 15px;
-    grid-column: 1/-1;
-    grid-row: 11/12;
-    padding: 25px;
-    line-height: 20px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.rtext a{
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-.aboutnav li{
-    display : inline-block;
-    padding-right: 15px;
-    text-align: left;
-    margin: 5px;
-    margin-top: 15px;
-    font-size: 15px;
-}
-.aboutnav li:nth-child(2){
-    text-decoration-line: underline; 
-    text-decoration-style: solid;
-}
-.abouthead h1{
-    color: #e0dfdc;
-    background-color: #35204d;
-    letter-spacing: .1em;
-    text-shadow: 
-      0 -1px 0 #fff, 
-      0 1px 0 #2e2e2e, 
-      0 2px 0 #2c2c2c, 
-      0 3px 0 #2a2a2a, 
-      0 4px 0 #282828, 
-      0 5px 0 #262626, 
-      0 6px 0 #242424, 
-      0 7px 0 #222, 
-      0 8px 0 #202020, 
-      0 9px 0 #1e1e1e, 
-      0 10px 0 #1c1c1c, 
-      0 11px 0 #1a1a1a, 
-      0 12px 0 #181818, 
-      0 13px 0 #161616, 
-      0 14px 0 #141414, 
-      0 15px 0 #121212, 
-      0 22px 30px rgba(0, 0, 0, 0.9);
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    text-align: left;
-    font-size: 25px;
-    text-decoration: underline;
+.cavs p{
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
     margin: 30px;
-    margin-bottom: 0px;
-    padding: 10px;
-    padding-bottom: 30px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 800px;
+    margin-top: 150px;
 }
-.headshot img{
-    background-image: url("/images/HeadShot.JPG");
+.cavs h1{
+    color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom:0px;
+}
+.personal{
+    background-image: url("../images/design.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: 1/-1;
-    grid-row: 2/3;
-    max-height: 300px;
-    margin: 25px;
-    margin-left:75px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+    grid-row:6/7;
 }
-.intro p{
-    text-align: center;
-    margin: 25px;
-    margin-top: 0px;
-    font-size: 10px;
-    grid-column: 1/-1;
-    grid-row: 3/4;
-    padding: 25px;
-    line-height: 15px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+.personal p{
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 850px;
+    margin-top: 150px;
 }
-.contact p{
-    text-align: left;
-    margin: 25px;
-    margin-top: 0px;
-    font-size: 10px;
-    grid-column: 1/-1;
-    grid-row: 3/4;
-    padding: 25px;
-    line-height: 15px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-button[type=text], select, textarea{
-    width: 90%;
-    padding: 10px;
-    margin: 10px;
-    border: 1px double black;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
+.personal h1{
+    color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom:0px;
 }
 
-button[type=submit]{
-    color: white;
-    padding: 10px;
-    margin: 30px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+
+
+.headshot{
+    margin-left: 150px;
 }
-button[type=submit]:hover{
-    color: white;
-    background-color: #CF387F;
-    box-shadow: 10px 10px #3F2F56;
+.intro{
+    grid-column: 3/5;
+    background-color: white;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin: 30px;
+    padding: 30px;
+    padding-top: 55px;
+    margin-right: 100px;
+    margin-left: -250px;
 }
 .formcontainer{
-    margin: 50px;
-    background-color:#3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+    grid-column: 2/5;
+    margin-right: 100px;
+    height: 550px;
+    /* background-color: #43529F; */
+    border: 10px solid black;
 }
 .formcontainer legend{
-    margin-top: 30px;
-    margin-left: 10px;
-    font-size: 25px;
+    font-size: 30px;
+    padding: 30px;
 }
 .formcontainer label{
-    margin-top: 30px;
-    margin-left: 10px;
     font-size: 20px;
+    padding-left: 100px;
 }
-.flip-card {
-    margin: 25px;
-    margin-left: 75px;
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F
-}
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-.flip-card:focus .flip-card-inner {
-    transform: rotateY(180deg);
-}
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-}
-.flip-card-back {
+.formcontainer input, .formcontainer textarea{
+    width: 800px;
     padding: 10px;
-    color: white;
-    background-color: #3F2F56;
-    transform: rotateY(180deg);
+    margin-bottom: 5px;
 }
-/* .parallax{
-     background-attachment: scroll;
-}  */
-
-
-
-
-
-
-
-.projnav li{
-    display : inline-block;
-    font-size: 25px;
-    padding-right: 15px;
-    margin: 10px;
+.formcontainer textarea{
+    margin-bottom: -10px;
 }
-.projnav li:last-child{
-    text-decoration-line: underline; 
-    text-decoration-style: solid;
+#name{
+    margin-left: 50px;
+}
+#email{
+    margin-left: 55px;
+}
+#subject{
+    margin-left: 38px;
+}
+#message{
+    margin-left: 23px;
+}
+.formcontainer button{
+    font-size: 30px;
+    margin-left: 1100px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+iframe{
+    margin: 20px;
+    margin-left: 100px;
+    width: 1300px;
+    height: 800px;
 }
 .collapsible{
-    background-color: #3F2F56;
     display: block;
-    color: white;
+    color: black;
     cursor: pointer;
     padding: 10px;
     width: 400px; 
     margin-left: 50px;
+    background-color: #060829;
     border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
     text-align: center;
+    font-size: 30px;
+    color: white;
 }
-.cavscontainer p{
-    padding: 15px;
-    margin: 50px;
-    width: 300px;
-    display: none;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.cavscontainer{
-    border: none;
-}
-.cavsproj h1{
-    grid-column: 1/-1;
+.active, .collapsible:hover {
+    background-color: #555;
+}  
+
+.softballproj{
     grid-row: 1/2;
-    text-align: center;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: 30px;
-    margin-bottom: 0px;
-    padding: 10px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.cavsproj img{
-    background-image: url("images/cavaliers-cavs-cleveland-1081256.jpg");
-    /* max-width: 100%; */
-    max-height: 250px;
-    grid-column: 1/-1;
-    grid-row: 4/5;
-    margin: 25px;
-    margin-bottom: 50px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.softballproj li{
-    padding: 15px;
-    display: none;
-    margin: 50px;
-    width: 300px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.softballproj h1{
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    text-align: center;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: 30px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-    padding: 10px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
 }
 .softballproj img{
-    background-image: url("images/msoftball.jpg");
-    /* max-width: 100%; */
-    max-height: 400px;
-    grid-column: 1/-1;
-    grid-row: 6/7;
-    margin: 50px;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+    width: 60vw;
+    margin-left: 300px;
 }
-
-.graphicproj a{
-    color: white;
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin: 100px;
-    margin-top: 50px;
-    margin-bottom: 500px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+.softballproj button{
+    width: 60vw;
+    margin-left: 300px;
 }
-.graphicproj h1{
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    text-align: center;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: 30px;
-    margin-bottom: 0px;
-    padding: 10px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+.softballproj p{
+    display: none;
+    width: 55vw;
+    margin-left: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.etasproj{
+    grid-row: 2/3;
+}
+.etasproj img{
+    width: 60vw;
+    margin-left: 300px;
+}
+.etasproj button{
+    width: 60vw;
+    margin-left: 300px;
+}
+.etasproj p{
+    display: none;
+    width: 55vw;
+    margin-left: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.cavsproj{
+    grid-row: 3/4;
+}
+.cavsproj img{
+    width: 60vw;
+    margin-left: 300px;
+}
+.cavsproj button{
+    width: 60vw;
+    margin-left: 300px;
+}
+.cavsproj p{
+    display: none;
+    width: 55vw;
+    margin-left: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.graphicproj{
+    grid-row: 4/5;
 }
 .graphicproj img{
-    background-image: url("images/bbb program 2.jpg");
-    perspective: 1000px;
-    max-height: 300px;
+    width: 60vw;
+    margin-left: 300px;
+    margin-top: 250px;
+}
+.graphicproj button{
+    width: 60vw;
+    margin-left: 300px;
+}
+.graphicproj p{
+    display: none;
+    width: 55vw;
+    margin-left: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.newproj{
     grid-column: 1/-1;
-    grid-row: 8/9;
-    margin: 50px;
-    margin-bottom: 50px;
-    margin-top: 25px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
 }
-.graphicproj a{
-    color: white;
+.newproj h2{
+    margin-left: 100px;
+    width: 25vw;
 }
-
-
-
-
-
-.gallerynav li{
-    margin-top: 20px;
-    display : inline-block;
-    font-size: 20px;
-    padding-right: 15px;
-}
-.gallerynav li:last-child{
-    text-decoration-line: underline; 
-    text-decoration-style: solid;
-}
-.play h1{
+.newproj img{
+    width: 30%;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
     grid-column: 1/-1;
-    grid-row: 1/2;
-    text-align: left;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: 30px;
-    margin-bottom: 0px;
-    padding: 10px;
-    background-color: #3F2F56;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.play img{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    grid-column: 1/-1;
-    grid-row: 8/9;
+    /* grid-row: 8/9; */
     margin-bottom: 25px;
     margin-top: 25px;
     border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
+    box-shadow: 10px 10px grey;
 }
-.more img{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+.newproj img:last-child{
+    margin-top: -1767px;
+    margin-left: 525px;
+}
+.oldproj{
     grid-column: 1/-1;
-    grid-row: 8/9;
+}
+.oldproj h2{
+    margin-top: -2500;
+    margin-left: 100px;
+    width: 25vw;
+}
+.oldproj img{
+    width: 30%;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
     margin-bottom: 25px;
     margin-top: 25px;
     border: 1px double black;
-    box-shadow: 10px 10px #CF387F;
-}
-.add img{
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    grid-column: 1/-1;
-    grid-row: 8/9;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    border: 1px double black;
-    box-shadow: 10px 10px #CF387F; 
-}
-img:hover{   
-   -webkit-filter: grayscale(100%);
-   filter: grayscale(100%);
-}
-footer{
-    font-size: 15px;
-    color: white;
-    font-weight: bold;
-    margin: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 800px){
-    .container{
-        grid-template-columns: 1fr 1fr;
-    }
-    .cavscontainer{
-        grid-template-columns: 1fr 1fr;
-    }
-    .gallerycontainer{
-        grid-template-columns: 1fr 1fr;
-    }
-    .indhead h1{
-        margin-top: 50px;
-        margin-right: 0px;
-        font-size: 50px;
-        padding: 100px;
-    }
-    .about{
-        margin-left: 0px;
-        margin-top: 50px;
-    }
-    .atext{
-        padding: 20px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    .ctext{
-        padding-top: 125px;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        padding-bottom: 0px;
-    }
-    .stext{
-        padding-top: 60px;
-        padding-left: 15px;
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .ptext{
-        padding-top: 60px;
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-    .rtext{
-        grid-column: 2/3;
-    }
-
-
-
-
-
-    .aboutnav li{
-        font-size: 20px;
-    }
-    .abouthead h1{
-        padding: 110px;
-        text-align: center;
-        font-size: 50px;
-    }    
-    .headshot img{
-        max-height: 800px;
-    }
-    .intro p{
-       font-size: 20px;
-       line-height: 25px;
-    }
-    .contact p{
-        font-size: 20px;
-        line-height: 25px;
-    }
-    .formcontainer{
-        grid-column: 1/-1;
-    }
-
-
-
-
-
-
-    .cavsproj h1{
-        margin-top: 55px;
-    }
-    .cavsproj img{
-        margin: 50px;
-        margin-top: 100px;
-    }
-    .cavsproj ul{
-        margin-top: 0px;
-    }
-    .collapsible:first-child{
-        margin-top: 50px;
-    }
-    .softballproj h1{
-        margin-top: 55px;
-    }
-    .graphicproj h1{
-        margin-top:50px;
-    }
-    .graphicproj img{
-        margin-top: 50px;
-    }
-
-
-
-
-    .play{
-        margin-bottom: 0px;
-    }
-    .more img{
-        margin-top: 50px;
-    }
-    .top img{
-        margin-top: 100px;
-    }
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 1200px){
-    .container{
-        grid-template-columns: 1fr 1fr;
-    }
-    .indhead{
-        grid-column: 1/-1;
-        grid-row: 1/2;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 10px;
-        margin-left: 5px;
-        margin-right: 20px;
-    }
-    .aboutnav{
-        text-align: left;
-    }
-    .about{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        margin: 30px;
-        margin-left: 0px;
-    }
-    .about img{
-        height: 400px;
-    }
-    .atext{
-        padding-top: 115px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        margin-right: 50px;
-        font-size: 20px;
-        line-height: 25px;
-        align-content: center;
-    }
-    .cavs{
-        grid-column: 2/3;
-        grid-row: 3/4;
-        margin: 50px;
-        margin-left: 115px;
-    }
-    .ctext{
-        padding: 50px;
-        padding-left: 25px;
-        font-size: 20px;
-        line-height: 25px;
-        grid-column: 1/2;
-        grid-row:3/4;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        margin-right: 0px;
-    }
-    .softball{
-        margin-left: 200px;
-        grid-column: 1/2;
-        grid-row: 4/5;
-        margin: 50px;
-    }
-    .stext{
-        padding-top: 90px;
-        padding-bottom: 50px;
-        font-size: 20px;
-        line-height: 25px;
-        grid-column: 2/3;
-        grid-row: 4/5;
-        margin-top: 110px;
-        margin-bottom: 80px;
-        margin-right: 100px;
-        margin-left: 0px;
-    }
-    .personal{
-        margin: 50px;
-        margin-left: 150px;
-        grid-column: 2/3;
-        grid-row: 5/6px;
-    }
-    .ptext{
-        padding-top: 60px;
-        font-size: 20px;
-        line-height: 25px;
-        grid-column: 1/2;
-        grid-row: 5/6;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        margin-right: 0px;
-    }
-    .resume{
-        grid-column: 1/2;
-        grid-row: 6/7;
-        margin: 50px;
-    }
-    .rtext{
-        padding-top: 60px;
-        font-size: 20px;
-        line-height: 25px;
-        grid-column: 2/3;
-        grid-row: 6/7;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        margin-left: 0px;
-    }
-
-
-    .aboutnav{
-        margin-left: -900px;
-    }
-    .abouthead{
-        grid-column: 1/-1;
-    }   
-    .abouthead h1{
-        padding: 15px;
-        padding-bottom: 30px;
-    } 
-    .headshot{
-        grid-row: 2/4;
-    }
-    .headshot img{
-        margin-left: 200px;
-        margin-top: 100px;
-    }
-    .intro p{
-        margin-top: 50px;
-        grid-column: 2/3;
-        grid-row: 2/4;
-    }
-    .contact p{
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .flip-card{
-        margin-left:210px;
-    }
-    /* .parallax{
-        background-image: url("images/cliffs.jpg");
-        grid-column: 1/-1;
-        grid-row: 4/5;
-        height: 400px;
-        width: 800px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
-
-
-
-
-    .cavscontainer{
-        grid-template-columns: 20px 1500px 20px;
-    }
-    .cavscontainer p{
-        margin-left: 550px;
-    }
-    .cavsproj{
-        grid-column: 2/3;
-    }
-    .cavsproj img{
-        margin-left: 500px;
-    }
-    .collapsible{
-        width: 800px;
-        margin-left:325px;
-    }
-    .softballproj{
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    .softballproj img{
-        margin-left: 550px;
-    }
-    .graphicproj{
-        grid-column: 2/3;
-        grid-row: 3/4;
-        margin: 0px;
-    }
-    .graphicproj img{
-        margin-left: 550px;
-    }
-    .graphicproj a{
-        width: 800px;
-        margin-left: -400px;
-    }
-
-
-
-    .gallerycontainer{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-    }
-    .more{
-        margin-top: 20px;
-    }
-}
-
-
-
-
-@media screen and (prefers-reduced-motion: reduce){
-    html{
-        scroll-behavior: auto; 
-    }
-  
-    .skip a{
-      background: white;
-      left: 0;
-      padding: 6px;
-      position: absolute;
-      top: -40px;
-      -webkit-transition: none !important; 
-      transition: none !important;
-      z-index: 1;
-    }
-  
-    .skip a:focus{
-      top:0;
-    }
+    box-shadow: 10px 10px grey;
 }
